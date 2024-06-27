@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="shortcut icon" href="_98efbb5e-6767-49e7-b226-4bdc0f9d727a.jfif" type="image/x-icon" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="script.js"></script>
+  <title>| PORTFOLIO |</title>
+
+</head>
+<body>
+  <script>
+    AOS.init();
+  </script>
+  <header>
+    <div class="header-contain"><h1 class="logo">AL WEBDEV</h1></div>
+    <nav class="contain-b">
+      <button class="btn-nav"><a href="index.html">Accueil</a></button>
+      <button class="btn-nav"><a href="about.html">à propos</a></button>
+      <button class="btn-nav"><a href="">Portfolio</a></button>
+    </nav>
+    <label class="hamburger">
+        <input type="checkbox" class="checkbox" />
+        <svg viewBox="0 0 32 32">
+          <path
+            class="line line-top-bottom"
+            d="M27 10 13 10C10.8 10 9 8.2 9 6 9 3.5 10.8 2 13 2 15.2 2 17 3.8 17 6L17 26C17 28.2 18.8 30 21 30 23.2 30 25 28.2 25 26 25 23.8 23.2 22 21 22L7 22"
+          ></path>
+          <path class="line" d="M7 16 27 16"></path>
+        </svg>
+      </label>
+  </header>
+  <section class="aboutme">
+    <div data-aos="zoom-out-right">
+      <h1 class="aer">LAISSEZ-MOI ME PRÉSENTER</h1>
+      <p class="presentation">
+        Je m'appelle Ahmed Laghaouet, j'ai 16 ans et je suis lycéen en filière
+        générale. Passionné de programmation depuis mon plus jeune âge, j'ai
+        acquis des compétences en développement web et logiciel.
+      </p>
+      <p class="presentation">
+        Malgré mon âge, je me considère comme un développeur junior. J'ai
+        exploré divers langages de programmation et domaines technologiques,
+        et je crois que la pratique est essentielle pour progresser. Je
+        souhaite donc exercer mes compétences en réalisant des projets
+        concrets, afin d'approfondir mes connaissances et de gagner de
+        l'expérience.
+      </p>
+    </div>
+  </section>
+  <section class="CCC">
+    <div data-aos="zoom-in" class="bloc-center">
+      <h1 class="apr">à PROPOS</h1>
+      <p class="PB">
+        Je cherche des opportunités me permettant de développer mes
+        compétences tout en poursuivant mes études. Je suis ouvert aux
+        collaborations, projets freelance, et autres opportunités pour mettre
+        en pratique mes compétences et contribuer à des projets intéressants.
+      </p>
+      <h1 class="apr">SERVICE :</h1>
+      <ul class="li">
+        <li>SEO</li>
+        <li>Developpement de site-web vitrine</li>
+        <li>Maintenance de site-web</li>
+        <li>Design et conception de site-web vitrine</li>
+      </ul>
+      <button class="projet">
+        <a href="#formulaire">Un projet ? contactez-moi !</a>
+      </button>
+    </div>
+  </section>
+  <section class="formulaire">
+    <form method="get" action="">
+      <fieldset data-aos="zoom-in">
+        <legend id="formulaire" class="white1">Vos coordonnées</legend>
+        <!-- Titre du fieldset -->
+        <div class="contain-f">
+          <div>
+            <label class="white2" for="nom"> NOM </label>
+            <input type="text" name="nom" id="nom" />
+          </div>
+          <div>
+            <label class="white2" for="prenom"> PRENOM </label>
+            <input type="text" name="prenom" id="prenom" />
+          </div>
+          <div>
+            <label class="white2" for="email"> E-MAIL </label>
+            <input type="email" name="email" id="email" />
+          </div>
+        </div>
+        <legend class="white1">Decrivez-moi Votre projet</legend>
+        <!-- Titre du fieldset -->
+        <p>
+          <textarea
+            class="ditmoi"
+            name="precisions"
+            id="precisions"
+            cols="40"
+            rows="4"
+          ></textarea>
+        </p>
+      </fieldset>
+    </form>
+  </section>
+  <footer>
+    <p class="pied">
+      Copyright &copy;2024; Designed and built by AL | WEB-DEV
+    </p>
+  </footer>
+</body>
+</html>

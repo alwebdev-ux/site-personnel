@@ -1,0 +1,420 @@
+html {
+    font-family: Arial, Helvetica, sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+}
+
+button {
+    border: none;
+    background-color: transparent;
+}
+
+
+.color {
+    color: rgb(76, 118, 161);
+
+}
+
+.carte-id {
+    color: rgb(76, 118, 161);
+    font-size: 50px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5%;
+    margin-left: 2%;
+    margin-right: 2%;
+}
+
+.btn-nav {
+    font-size: 17.5px;
+
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+.btn-nav {
+    font-size: 18px;
+    color: #000000;
+    font-family: inherit;
+    font-weight: 200;
+    cursor: pointer;
+    position: relative;
+    border: none;
+    background: none;
+    text-transform: uppercase;
+    transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition-duration: 400ms;
+    transition-property: color;
+  }
+  
+  .btn-nav:focus,
+  .btn-nav:hover {
+    color: #000000;
+  }
+  
+  .btn-nav:focus:after,
+  .btn-nav:hover:after {
+    width: 100%;
+    left: 0%;
+  }
+  
+  .btn-nav:after {
+    content: "";
+    pointer-events: none;
+    bottom: -2px;
+    left: 50%;
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background-color: #000000;
+    transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition-duration: 400ms;
+    transition-property: width, left;
+  }
+
+.card {
+    display: flex;
+    height: 70px;
+    width: 350px;
+  }
+  
+  .card svg {
+    position: absolute;
+    display: flex;
+    width: 60%;
+    height: 100%;
+    font-size: 24px;
+    font-weight: 700;
+    opacity: 1;
+    transition: opacity 0.25s;
+    z-index: 2;
+    padding: 0.25rem;
+    cursor: pointer;
+  }
+  
+  .card .social-link1,.card .social-link2,.card .social-link3,.card .social-link4,.card .social-link5 {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 25%;
+    color: whitesmoke;
+    font-size: 24px;
+    text-decoration: none;
+    transition: 0.25s;
+    border-radius: 25px;
+  }
+  
+  .card svg {
+    transform: scale(1);
+  }
+  
+  .card .social-link1:hover {
+    background: #f09433;
+    background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    background: -webkit-linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
+    background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888',GradientType=1 );
+    animation: bounce_613 0.4s linear;
+  }
+  
+  .card .social-link2:hover {
+    background-color: #242c34;
+    animation: bounce_613 0.4s linear;
+  }
+  
+  .card .social-link3:hover {
+    background-color: #5865f2;
+    animation: bounce_613 0.4s linear;
+  }
+  
+  .card .social-link4:hover {
+    background-color: #0a66c2;
+    animation: bounce_613 0.4s linear;
+  }
+  
+  .card .social-link5:hover {
+    background-color: #ff8000;
+    animation: bounce_613 0.4s linear;
+  }
+  
+  @keyframes bounce_613 {
+    40% {
+      transform: scale(1.4);
+    }
+  
+    60% {
+      transform: scale(0.8);
+    }
+  
+    80% {
+      transform: scale(1.2);
+    }
+  
+    100% {
+      transform: scale(1);
+    }
+  }
+
+  .btn{
+    display: flex;
+
+  }
+
+.logo {
+    color:rgb(10, 25, 40) ;
+
+}
+
+.part1 {
+    background-color: rgb(10, 25, 40);
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    padding: 5%;
+}
+
+.logoimg {
+    width: 500px;
+    border-radius:
+        50% 50% 50% 50% / 50% 50% 50% 50%
+}
+
+.projet {
+    color: white;
+    background-color: rgb(76, 118, 161);
+    font-size: 25px;
+    padding: 2%;
+    border-radius: 50px;
+    transition: 0.33s;
+}
+
+.projet:hover {
+    color: rgb(76, 118, 161);
+    background-color: white;
+    transition: 0.33s;
+}
+
+.texte {}
+
+.white {
+    color: white;
+}
+
+.exemple{
+    text-align: center;
+    font-size: 30px;
+
+}
+.exemple-projet{
+    margin-top: 7.5%;
+    height: 200px;
+}
+.info{
+text-align: center;
+}
+
+.formulaire{
+    background-color:rgb(10, 25, 40) ;
+
+}
+.ditmoi{
+    width: 40%;
+    margin-left:30% ;
+    margin-right:30% ;
+    padding-bottom: 10%;
+}
+
+.white1{
+    color: white;
+    text-align: center;
+    margin-top: 5%;
+    font-size: 25px;
+}
+.contain-f{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 5%;
+}
+
+.pied{
+    text-align: center;
+    color: rgb(10, 25, 40);
+    font-weight: 800;
+}
+
+.white2{
+    color: white;
+    font-weight: 500;
+}
+
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+.aer{
+
+    font-weight: 500px;
+    padding: 1.5%;
+    font-size: 35px;
+}
+.aboutme{
+    background-color: rgb(10, 25, 40);
+    color: rgb(255, 255, 255);
+    padding: 5%;
+
+}
+
+    .apr{
+        text-transform: uppercase;
+    }
+    .bloc-center{
+    border-right: rgb(10, 25, 40) solid 2px;
+    border-bottom: rgb(10, 25, 40) solid 2px;
+    width: 50%;
+    margin: auto;
+    padding: 2%;
+    color: rgb(10, 25, 40);
+    box-shadow: rgb(10, 25, 40) 10px 10px;
+    }
+    .PB{
+        color: rgb(10, 25, 40);
+        font-weight: 500;
+        font-size: 25px;
+    }
+
+    .li{
+        font-size: 20px;
+        font-weight:500px;
+
+    }
+.CCC{
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+.hamburger{
+  display: none;
+}
+.presentation{
+  width: 75%;
+  font-size: 25px;
+  padding: 2%;
+}
+.contain-b {
+  margin: 0%;
+}
+
+@media screen and (max-width: 1100px) {
+  .logoimg {
+      display: none;
+  }}
+  
+
+
+  @media screen and (max-width: 600px){
+    .contain-f{
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+
+  @media screen and (max-width: 549px){
+
+    .hamburger{
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      z-index: 10000;
+      position: fixed;
+      right: 0%;
+      top: 0;
+      padding: 3.5%;
+    }
+    
+    .hamburger input {
+      display: none;
+    }
+    
+    .hamburger svg {
+      /* The size of the SVG defines the overall size */
+      height: 3em;
+      /* Define the transition for transforming the SVG */
+      transition: transform 600ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    
+    .line {
+      fill: none;
+      stroke: rgb(0, 0, 0);
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      stroke-width: 3;
+      /* Define the transition for transforming the Stroke */
+      transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
+                  stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    
+    .line-top-bottom {
+      stroke-dasharray: 12 63;
+    }
+    
+    .hamburger input:checked + svg {
+      transform: rotate(-45deg);
+    }
+    
+    .hamburger input:checked + svg .line-top-bottom {
+      stroke-dasharray: 20 300;
+      stroke-dashoffset: -32.42;
+    }
+    .contain-b {
+display: none;
+    }
+
+    .MLM {
+      display: flex;
+      flex-direction: column; 
+      position: fixed;
+      width: 101%;
+      height: 105vh;
+      background-color: #ffffff;
+      z-index: 10000;
+      margin-left: -3%;
+      margin-top: -1%;
+      transition: 5s;
+    }
+
+    .btn-nav{
+      padding: 10%;
+      margin-top: 15%
+    }
+    .bloc-center{
+      width: 85%;
+    }
+    .logo{
+      z-index: 10000;
+    }
+
+    .carte-id{
+      font-size: 40px;
+    }
+.texte{
+  font-size: 20px;
+}
+.btn{
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+}
+  }
+
