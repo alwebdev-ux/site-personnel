@@ -131,44 +131,49 @@
     <section data-aos="zoom-in-up" class="exemple-projet">
       <h1 class="exemple">Mes derniers projets</h1>
 
-      <p class="info">
-        Aucun projet n'a encore été importé dans cette section...
-      </p>
+      <div class="contain-project">
+        <img class="imgforproject" src="img-project/Calculatrice.png" alt="">
+        <img class="imgforproject" src="img-project/NOWEATHER.png" alt="">
+
+      </div>
     </section>
     <section class="formulaire">
-      <form method="get" action="">
-        <fieldset data-aos="zoom-in">
-          <legend id="formulaire" class="white1">Vos coordonnées</legend>
-          <!-- Titre du fieldset -->
-          <div class="contain-f">
-            <div>
-              <label class="white2" for="nom"> NOM </label>
-              <input type="text" name="nom" id="nom" />
-            </div>
-            <div>
-              <label class="white2" for="prenom"> PRENOM </label>
-              <input type="text" name="prenom" id="prenom" />
-            </div>
-            <div>
-              <label class="white2" for="email"> E-MAIL </label>
-              <input type="email" name="email" id="email" required />
-            </div>
-          </div>
-
-          <legend class="white1">Decrivez-moi Votre projet</legend>
-          <!-- Titre du fieldset -->
-          <p>
-            <textarea
-              class="ditmoi"
-              name="precisions"
-              id="precisions"
-              cols="40"
-              rows="4"
-            ></textarea>
-          </p>
-        </fieldset>
+      <form method="POST" action="send_email.php"> <!-- Change 'method' à 'POST' et met le bon fichier d'action -->
+          <fieldset data-aos="zoom-in">
+              <legend id="formulaire" class="white1">Vos coordonnées</legend>
+              <!-- Titre du fieldset -->
+              <div class="contain-f">
+                  <div>
+                      <label class="white2" for="nom">NOM</label>
+                      <input type="text" name="nom" id="nom" required /> <!-- Ajout de 'required' pour validation -->
+                  </div>
+                  <div>
+                      <label class="white2" for="prenom">PRENOM</label>
+                      <input type="text" name="prenom" id="prenom" required /> <!-- Ajout de 'required' pour validation -->
+                  </div>
+                  <div>
+                      <label class="white2" for="email">E-MAIL</label>
+                      <input type="email" name="email" id="email" required />
+                  </div>
+                  <button type="submit">Envoyer</button> <!-- Bouton pour soumettre le formulaire -->
+              </div>
+  
+              <legend class="white1">Décrivez-moi Votre projet</legend>
+              <!-- Titre du fieldset -->
+              <p>
+                  <textarea
+                      class="ditmoi"
+                      name="precisions"
+                      id="precisions"
+                      cols="40"
+                      rows="4"
+                      required
+                  ></textarea> <!-- Ajout de 'required' pour validation -->
+              </p>
+          </fieldset>
       </form>
-    </section>
+  </section>
+  
 
     <footer>
       <p class="pied">
