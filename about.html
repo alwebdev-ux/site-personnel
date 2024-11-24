@@ -9,7 +9,6 @@
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="script.js"></script>
   <title>| PORTFOLIO |</title>
-
 </head>
 <body>
   <script>
@@ -23,92 +22,123 @@
       <button class="btn-nav"><a href="">Portfolio</a></button>
     </nav>
     <label class="hamburger">
-        <input type="checkbox" class="checkbox" />
-        <svg viewBox="0 0 32 32">
-          <path
-            class="line line-top-bottom"
-            d="M27 10 13 10C10.8 10 9 8.2 9 6 9 3.5 10.8 2 13 2 15.2 2 17 3.8 17 6L17 26C17 28.2 18.8 30 21 30 23.2 30 25 28.2 25 26 25 23.8 23.2 22 21 22L7 22"
-          ></path>
-          <path class="line" d="M7 16 27 16"></path>
-        </svg>
-      </label>
+      <input type="checkbox" class="checkbox" />
+      <svg viewBox="0 0 32 32">
+        <path class="line line-top-bottom" d="M27 10 13 10C10.8 10 9 8.2 9 6 9 3.5 10.8 2 13 2 15.2 2 17 3.8 17 6L17 26C17 28.2 18.8 30 21 30 23.2 30 25 28.2 25 26 25 23.8 23.2 22 21 22L7 22"></path>
+        <path class="line" d="M7 16 27 16"></path>
+      </svg>
+    </label>
   </header>
+  
   <section class="aboutme">
     <div data-aos="zoom-out-right">
       <h1 class="aer">LAISSEZ-MOI ME PRÉSENTER</h1>
-      <p class="presentation">
-        Je m'appelle Ahmed Laghaouet, j'ai 16 ans et je suis lycéen en filière
-        générale. Passionné de programmation depuis mon plus jeune âge, j'ai
-        acquis des compétences en développement web et logiciel.
-      </p>
-      <p class="presentation">
-        Malgré mon âge, je me considère comme un développeur junior. J'ai
-        exploré divers langages de programmation et domaines technologiques,
-        et je crois que la pratique est essentielle pour progresser. Je
-        souhaite donc exercer mes compétences en réalisant des projets
-        concrets, afin d'approfondir mes connaissances et de gagner de
-        l'expérience.
-      </p>
+      <p class="presentation">Je m'appelle Ahmed Laghaouet, j'ai 16 ans et je suis lycéen en filière générale. Passionné de programmation depuis mon plus jeune âge, j'ai acquis des compétences en développement web et logiciel.</p>
+      <p class="presentation">Malgré mon âge, je me considère comme un développeur junior. J'ai exploré divers langages de programmation et domaines technologiques, et je crois que la pratique est essentielle pour progresser. Je souhaite donc exercer mes compétences en réalisant des projets concrets, afin d'approfondir mes connaissances et de gagner de l'expérience.</p>
     </div>
   </section>
+  
   <section class="CCC">
     <div data-aos="zoom-in" class="bloc-center">
       <h1 class="apr">à PROPOS</h1>
-      <p class="PB">
-        Je cherche des opportunités me permettant de développer mes
-        compétences tout en poursuivant mes études. Je suis ouvert aux
-        collaborations, projets freelance, et autres opportunités pour mettre
-        en pratique mes compétences et contribuer à des projets intéressants.
-      </p>
+      <p class="PB">Je cherche des opportunités me permettant de développer mes compétences tout en poursuivant mes études. Je suis ouvert aux collaborations, projets freelance, et autres opportunités pour mettre en pratique mes compétences et contribuer à des projets intéressants.</p>
       <h1 class="apr">SERVICE :</h1>
       <ul class="li">
         <li>SEO</li>
-        <li>Developpement de site-web vitrine</li>
+        <li>Développement de site-web vitrine</li>
         <li>Maintenance de site-web</li>
         <li>Design et conception de site-web vitrine</li>
       </ul>
-      <button class="projet">
-        <a href="#formulaire">Un projet ? contactez-moi !</a>
-      </button>
+      <button class="projet"><a href="#formulaire">Un projet ? contactez-moi !</a></button>
     </div>
   </section>
+  
   <section class="formulaire">
-    <form method="get" action="">
+    <form id="contactForm" method="get" action="">
       <fieldset data-aos="zoom-in">
         <legend id="formulaire" class="white1">Vos coordonnées</legend>
         <!-- Titre du fieldset -->
         <div class="contain-f">
           <div>
             <label class="white2" for="nom"> NOM </label>
-            <input type="text" name="nom" id="nom" />
+            <input type="text" name="nom" id="nom" required />
           </div>
           <div>
             <label class="white2" for="prenom"> PRENOM </label>
-            <input type="text" name="prenom" id="prenom" />
+            <input type="text" name="prenom" id="prenom" required />
           </div>
           <div>
             <label class="white2" for="email"> E-MAIL </label>
-            <input type="email" name="email" id="email" />
+            <input type="email" name="email" id="email" required />
           </div>
         </div>
-        <legend class="white1">Decrivez-moi Votre projet</legend>
+        <legend class="white1">Décrivez-moi votre projet</legend>
         <!-- Titre du fieldset -->
         <p>
-          <textarea
-            class="ditmoi"
-            name="precisions"
-            id="precisions"
-            cols="40"
-            rows="4"
-          ></textarea>
+          <textarea class="ditmoi" name="precisions" id="precisions" cols="40" rows="4" required></textarea>
         </p>
+      
+      
+      <button class="send-btn" type="submit">
+        <div class="svg-wrapper-1">
+          <div class="svg-wrapper">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              width="24"
+              height="24"
+            >
+              <path fill="none" d="M0 0h24v24H0z"></path>
+              <path
+                fill="currentColor"
+                d="M1.946 9.315c-.522-.174-.527-.455.01-.634l19.087-6.362c.529-.176.832.12.684.638l-5.454 19.086c-.15.529-.455.547-.679.045L12 14l6-8-8 6-8.054-2.685z"
+              ></path>
+            </svg>
+          </div>
+        </div>
+        <span>Envoyer</span>
+      </button>
       </fieldset>
+      <button type="submit">Envoyer</button>
     </form>
   </section>
+  
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script>
+    // Initialiser EmailJS avec ta clé publique
+    (function() {
+        emailjs.init("G7yXfG4xlQrMxRBTw"); // Remplace par ta clé publique
+    })();
+
+    document.getElementById("contactForm").addEventListener("submit", function(event) {
+        event.preventDefault(); // Empêche l'envoi par défaut du formulaire
+
+        // Récupère les valeurs du formulaire
+        const name = document.getElementById("nom").value; // Utiliser l'ID correct
+        const prenom = document.getElementById("prenom").value; // Utiliser l'ID correct
+        const email = document.getElementById("email").value; // Utiliser l'ID correct
+        const message = document.getElementById("precisions").value; // Utiliser l'ID correct
+
+        // Prépare les données à envoyer
+        const templateParams = {
+            to_name: name + " " + prenom, // Nom complet du destinataire
+            from_name: name,               // Nom de l'expéditeur
+            from_email: email,             // E-mail de l'expéditeur
+            message: message                // Contenu du message
+        };
+
+        // Envoie l'email via EmailJS
+        emailjs.send("service_fivkoqg", "template_pq8tk8s", templateParams)
+            .then(function(response) {
+                alert("E-mail envoyé avec succès !");
+            }, function(error) {
+                alert("Erreur lors de l'envoi de l'e-mail : " + JSON.stringify(error));
+            });
+    });
+  </script>
+  
   <footer>
-    <p class="pied">
-      Copyright &copy;2024; Designed and built by AL | WEB-DEV
-    </p>
+    <p class="pied">Copyright &copy;2024; Designed and built by AL | WEB-DEV</p>
   </footer>
 </body>
 </html>
