@@ -102,87 +102,100 @@
     </div>
   </section>
   <section class="formulaire" method="POST" action="http://localhost:5000/send_email">
-    <form id="contactForm" method="get" action="">
-      <fieldset data-aos="zoom-in">
-        <legend id="formulaire" class="white1">Vos coordonnées</legend>
-        <!-- Titre du fieldset -->
-        <div class="contain-f">
-          <div>
-            <label class="white2" for="nom"> NOM </label>
-            <input type="text" name="nom" id="nom" required />
+    <div class="container">
+      <form id="contactForm" class="contact-form">
+          <h2 class="CM">Contactez-moi</h2>
+          <p class="subtitle">Décrivez votre projet et je vous répondrai dans les plus brefs délais.</p>
+          
+          <div class="form-row">
+              <div class="form-group">
+                  <label for="nom">Nom</label>
+                  <input type="text" id="nom" name="nom" placeholder="Votre nom" required>
+              </div>
+              
+              <div class="form-group">
+                  <label for="prenom">Prénom</label>
+                  <input type="text" id="prenom" name="prenom" placeholder="Votre prénom" required>
+              </div>
           </div>
-          <div>
-            <label class="white2" for="prenom"> PRENOM </label>
-            <input type="text" name="prenom" id="prenom" required />
+          
+          <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="vous@exemple.com" required>
           </div>
-          <div>
-            <label class="white2" for="email"> E-MAIL </label>
-            <input type="email" name="email" id="email" required />
+          
+          <div class="form-group">
+              <label for="precisions">Message</label>
+              <textarea id="precisions" name="precisions" placeholder="Décrivez votre projet..." required></textarea>
           </div>
-        </div>
-        <legend class="white1">Décrivez-moi votre projet</legend>
-        <!-- Titre du fieldset -->
-        <p>
-          <textarea class="ditmoi" name="precisions" id="precisions" cols="40" rows="4" required></textarea>
-        </p>
+          
+          <button type="submit" class="submit-btn" id="submit-button">
+              <div class="button-content">
+                  <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" fill="none">
+                      <path d="M22 2L11 13M22 2L15 22L11 13M22 2L2 9L11 13"/>
+                  </svg>
+                  <span>Envoyer</span>
+              </div>
+              <div class="loading-spinner" style="display: none;">
+                  <svg class="spinner" viewBox="0 0 50 50">
+                      <circle class="path" cx="25" cy="25" r="20" fill="none" stroke-width="5"></circle>
+                  </svg>
+              </div>
+          </button>
+      </form>
+  </div>
 
-
-        <button class="send-btn" type="submit">
-          <div class="svg-wrapper-1">
-            <div class="svg-wrapper">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
-                <path fill="none" d="M0 0h24v24H0z"></path>
-                <path fill="currentColor"
-                  d="M1.946 9.315c-.522-.174-.527-.455.01-.634l19.087-6.362c.529-.176.832.12.684.638l-5.454 19.086c-.15.529-.455.547-.679.045L12 14l6-8-8 6-8.054-2.685z">
-                </path>
-              </svg>
-            </div>
-          </div>
-          <span>Envoyer</span>
-        </button>
-      </fieldset>
-    </form>
-  </section>
   <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
   <script>
-    // Initialiser EmailJS avec ta clé publique
-    (function () {
-      emailjs.init("G7yXfG4xlQrMxRBTw"); // Remplace par ta clé publique
-    })();
+      (function() {
+          emailjs.init("G7yXfG4xlQrMxRBTw");
+      })();
 
-    document.getElementById("contactForm").addEventListener("submit", function (event) {
-      event.preventDefault(); // Empêche l'envoi par défaut du formulaire
+      document.getElementById("contactForm").addEventListener("submit", function(event) {
+          event.preventDefault();
+          
+          const submitButton = document.getElementById('submit-button');
+          const buttonContent = submitButton.querySelector('.button-content');
+          const loadingSpinner = submitButton.querySelector('.loading-spinner');
+          
+          // Désactiver le bouton et afficher le spinner
+          submitButton.disabled = true;
+          buttonContent.style.display = 'none';
+          loadingSpinner.style.display = 'block';
 
-      // Récupère les valeurs du formulaire
-      const name = document.getElementById("nom").value; // Utiliser l'ID correct
-      const prenom = document.getElementById("prenom").value; // Utiliser l'ID correct
-      const email = document.getElementById("email").value; // Utiliser l'ID correct
-      const message = document.getElementById("precisions").value; // Utiliser l'ID correct
+          const templateParams = {
+              to_name: document.getElementById("nom").value + " " + document.getElementById("prenom").value,
+              from_name: document.getElementById("nom").value,
+              from_email: document.getElementById("email").value,
+              message: document.getElementById("precisions").value
+          };
 
-      // Prépare les données à envoyer
-      const templateParams = {
-        to_name: name + " " + prenom, // Nom complet du destinataire
-        from_name: name,               // Nom de l'expéditeur
-        from_email: email,             // E-mail de l'expéditeur
-        message: message                // Contenu du message
-      };
-
-      // Envoie l'email via EmailJS
-      emailjs.send("service_fivkoqg", "template_pq8tk8s", templateParams)
-        .then(function (response) {
-          alert("E-mail envoyé avec succès !");
-        }, function (error) {
-          alert("Erreur lors de l'envoi de l'e-mail : " + JSON.stringify(error));
-        });
-    });
+          emailjs.send("service_fivkoqg", "template_pq8tk8s", templateParams)
+              .then(function(response) {
+                  alert("Message envoyé avec succès !");
+                  event.target.reset();
+              })
+              .catch(function(error) {
+                  alert("Erreur lors de l'envoi : " + JSON.stringify(error));
+              })
+              .finally(function() {
+                  // Réactiver le bouton et cacher le spinner
+                  submitButton.disabled = false;
+                  buttonContent.style.display = 'flex';
+                  loadingSpinner.style.display = 'none';
+              });
+      });
   </script>
-
+  </section>
 
   <footer>
     <p class="pied">
       Copyright &copy;2024; Designed and built by AL | WEB-DEV
     </p>
   </footer>
+
+
+  
 </body>
 
 </html>

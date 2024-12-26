@@ -39,67 +39,116 @@
   </section>
   
   <section class="CCC">
-    <div data-aos="zoom-in" class="bloc-center">
-      <h1 class="apr">à PROPOS</h1>
-      <p class="PB">Je cherche des opportunités me permettant de développer mes compétences tout en poursuivant mes études. Je suis ouvert aux collaborations, projets freelance, et autres opportunités pour mettre en pratique mes compétences et contribuer à des projets intéressants.</p>
-      <h1 class="apr">SERVICE :</h1>
-      <ul class="li">
-        <li>SEO</li>
-        <li>Développement de site-web vitrine</li>
-        <li>Maintenance de site-web</li>
-        <li>Design et conception de site-web vitrine</li>
-      </ul>
-      <button class="projet"><a href="#formulaire">Un projet ? contactez-moi !</a></button>
-    </div>
+<h1></h1>
+  <div class="container-b">
+      <!-- Pack BASIC -->
+      <div class="card-offre">
+          <div class="card-header">
+              <div class="price-tag">749.99€</div>
+              <h3>Pack BASIC</h3>
+              <p class="subtitle">Site One Page</p>
+          </div>
+          <div class="card-content">
+              <ul class="features">
+                  <li>Une page unique entièrement personnalisée.</li>
+                  <li>Design moderne et 100% responsive.</li>
+                  <li>Formulaire de contact ( + 100€ ).</li>
+                  <li>Interface utilisateur fluide et intuitive.</li>
+                  <li>Garantie de 2 mois pour corriger tout problème technique après la livraison.</li>
+              </ul>
+              
+          </div>
+          <div class="wave-bottom"></div>
+      </div>
+
+      <!-- Pack MEDIUM -->
+      <div class="card-offre featured">
+          <div class="popular-badge">Plus populaire</div>
+          <div class="card-header">
+              <div class="price-tag">1249.99€</div>
+              <h3>Pack MEDIUM</h3>
+              <p class="subtitle">Site Multi-Page (jusqu'à 5 pages)</p>
+          </div>
+          <div class="card-content">
+              <ul class="features">
+                  <li>Toutes les fonctionnalités du pack BASIC.</li>
+                  <li>Jusqu'à 5 pages personnalisées.</li>
+                  <li>Formulaire de contact offert. </li>
+                  <li>Structure adaptée pour une lecture claire et agréable.</li>
+                  <li>Garantie de 2 mois pour corriger tout problème technique après la livraison.</li>
+              </ul>
+              
+          </div>
+          <div class="wave-bottom"></div>
+      </div>
+
+      <!-- Pack HIGH -->
+      <div class="card-offre">
+          <div class="card-header">
+              <div class="price-tag">1499.99€</div>
+              <h3>Pack HIGH</h3>
+              <p class="subtitle">Site Multi-Page (6 pages et plus)</p>
+          </div>
+          <div class="card-content">
+              <ul class="features">
+                  <li>Toutes les fonctionnalités du pack MEDIUM.</li>
+                  <li>A partir de 6 pages ( 200€ par page supplémentaire ).</li>
+                  <li>Formulaire de contact offert. </li>
+                  <li>Architecture pensée pour la mise en valeur de vos contenus. </li>
+                  <li>Garantie de 2 mois pour corriger tout problème technique après la livraison.</li>
+              </ul>
+              
+          </div>
+          
+      </div>
+  </div>
+
+
   </section>
   
-  <section class="formulaire">
-    <form id="contactForm" method="get" action="">
-      <fieldset data-aos="zoom-in">
-        <legend id="formulaire" class="white1">Vos coordonnées</legend>
-        <!-- Titre du fieldset -->
-        <div class="contain-f">
-          <div>
-            <label class="white2" for="nom"> NOM </label>
-            <input type="text" name="nom" id="nom" required />
+  <section class="formulaire" id="formulaire">
+    <div class="container">
+      <form id="contactForm" class="contact-form">
+          <h2 class="CM">Contactez-moi</h2>
+          <p class="subtitle">Décrivez votre projet et je vous répondrai dans les plus brefs délais.</p>
+          
+          <div class="form-row">
+              <div class="form-group">
+                  <label for="nom">Nom</label>
+                  <input class="input-name" type="text" id="nom" name="nom" placeholder="Votre nom" required>
+              </div>
+              
+              <div class="form-group">
+                  <label for="prenom">Prénom</label>
+                  <input class="input-name" type="text" id="prenom" name="prenom" placeholder="Votre prénom" required>
+              </div>
           </div>
-          <div>
-            <label class="white2" for="prenom"> PRENOM </label>
-            <input type="text" name="prenom" id="prenom" required />
+          
+          <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="vous@exemple.com" required>
           </div>
-          <div>
-            <label class="white2" for="email"> E-MAIL </label>
-            <input type="email" name="email" id="email" required />
+          
+          <div class="form-group">
+              <label for="precisions">Message</label>
+              <textarea id="precisions" name="precisions" placeholder="Décrivez votre projet..." required></textarea>
           </div>
-        </div>
-        <legend class="white1">Décrivez-moi votre projet</legend>
-        <!-- Titre du fieldset -->
-        <p>
-          <textarea class="ditmoi" name="precisions" id="precisions" cols="40" rows="4" required></textarea>
-        </p>
-      
-      
-      <button class="send-btn" type="submit">
-        <div class="svg-wrapper-1">
-          <div class="svg-wrapper">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
-              width="24"
-              height="24"
-            >
-              <path fill="none" d="M0 0h24v24H0z"></path>
-              <path
-                fill="currentColor"
-                d="M1.946 9.315c-.522-.174-.527-.455.01-.634l19.087-6.362c.529-.176.832.12.684.638l-5.454 19.086c-.15.529-.455.547-.679.045L12 14l6-8-8 6-8.054-2.685z"
-              ></path>
-            </svg>
-          </div>
-        </div>
-        <span>Envoyer</span>
-      </button>
-      </fieldset>
-    </form>
+          
+          <button type="submit" class="submit-btn" id="submit-button">
+              <div class="button-content">
+                  <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" fill="none">
+                      <path d="M22 2L11 13M22 2L15 22L11 13M22 2L2 9L11 13"/>
+                  </svg>
+                  <span>Envoyer</span>
+              </div>
+              <div class="loading-spinner" style="display: none;">
+                  <svg class="spinner" viewBox="0 0 50 50">
+                      <circle class="path" cx="25" cy="25" r="20" fill="none" stroke-width="5"></circle>
+                  </svg>
+              </div>
+          </button>
+      </form>
+  </div>
   </section>
   
   <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
