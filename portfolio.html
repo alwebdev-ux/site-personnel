@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="shortcut icon" href="98efbb5e-6767-49e7-b226-4bdc0f9d727a.png" type="image/x-icon" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="script.js"></script>
+  <title>| PORTFOLIO |</title>
+</head>
+
+<body>
+  <script>
+    AOS.init();
+  </script>
+  <header>
+    <div class="header-contain">
+      <h1 class="logo">AL WEBDEV</h1>
+    </div>
+    <nav class="contain-b">
+      <button class="btn-nav"><a href="index.html">Accueil</a></button>
+      <button class="btn-nav"><a href="about.html">à propos</a></button>
+      <button class="btn-nav"><a href="portfolio.html">Portfolio</a></button>
+    </nav>
+    <label class="hamburger">
+      <input type="checkbox" class="checkbox" />
+      <svg viewBox="0 0 32 32">
+        <path class="line line-top-bottom"
+          d="M27 10 13 10C10.8 10 9 8.2 9 6 9 3.5 10.8 2 13 2 15.2 2 17 3.8 17 6L17 26C17 28.2 18.8 30 21 30 23.2 30 25 28.2 25 26 25 23.8 23.2 22 21 22L7 22">
+        </path>
+        <path class="line" d="M7 16 27 16"></path>
+      </svg>
+    </label>
+  </header>
+  <section data-aos="zoom-in-up" class="exemple-projet">
+    <h1 class="exemple">PORTFOLIO</h1>
+
+    <div class="contain-project">
+      <a href="https://alwebdev-ux.github.io/Calculatrice-JS-/"> <img class="imgforproject"
+          src="Calculatrice.png" alt=""></a>
+      <a href="https://alwebdev-ux.github.io/M-t-o-JS/"><img class="imgforproject" src="NOWEATHER.png"
+          alt=""></a>
+
+    </div>
+  </section>
+  <section class="formulaire" method="POST" action="http://localhost:5000/send_email">
+    <div class="container">
+      <form id="contactForm" class="contact-form">
+          <h2 class="CM">Contactez-moi</h2>
+          <p class="subtitle">Décrivez votre projet et je vous répondrai dans les plus brefs délais.</p>
+          
+          <div class="form-row">
+              <div class="form-group">
+                  <label for="nom">Nom</label>
+                  <input type="text" id="nom" name="nom" placeholder="Votre nom" required>
+              </div>
+              
+              <div class="form-group">
+                  <label for="prenom">Prénom</label>
+                  <input type="text" id="prenom" name="prenom" placeholder="Votre prénom" required>
+              </div>
+          </div>
+          
+          <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="vous@exemple.com" required>
+          </div>
+          
+          <div class="form-group">
+              <label for="precisions">Message</label>
+              <textarea id="precisions" name="precisions" placeholder="Décrivez votre projet..." required></textarea>
+          </div>
+          
+          <button type="submit" class="submit-btn" id="submit-button">
+              <div class="button-content">
+                  <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" fill="none">
+                      <path d="M22 2L11 13M22 2L15 22L11 13M22 2L2 9L11 13"/>
+                  </svg>
+                  <span>Envoyer</span>
+              </div>
+              <div class="loading-spinner" style="display: none;">
+                  <svg class="spinner" viewBox="0 0 50 50">
+                      <circle class="path" cx="25" cy="25" r="20" fill="none" stroke-width="5"></circle>
+                  </svg>
+              </div>
+          </button>
+      </form>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script>
+      (function() {
+          emailjs.init("G7yXfG4xlQrMxRBTw");
+      })();
+
+      document.getElementById("contactForm").addEventListener("submit", function(event) {
+          event.preventDefault();
+          
+          const submitButton = document.getElementById('submit-button');
+          const buttonContent = submitButton.querySelector('.button-content');
+          const loadingSpinner = submitButton.querySelector('.loading-spinner');
+          
+          // Désactiver le bouton et afficher le spinner
+          submitButton.disabled = true;
+          buttonContent.style.display = 'none';
+          loadingSpinner.style.display = 'block';
+
+          const templateParams = {
+              to_name: document.getElementById("nom").value + " " + document.getElementById("prenom").value,
+              from_name: document.getElementById("nom").value,
+              from_email: document.getElementById("email").value,
+              message: document.getElementById("precisions").value
+          };
+
+          emailjs.send("service_fivkoqg", "template_pq8tk8s", templateParams)
+              .then(function(response) {
+                  alert("Message envoyé avec succès !");
+                  event.target.reset();
+              })
+              .catch(function(error) {
+                  alert("Erreur lors de l'envoi : " + JSON.stringify(error));
+              })
+              .finally(function() {
+                  // Réactiver le bouton et cacher le spinner
+                  submitButton.disabled = false;
+                  buttonContent.style.display = 'flex';
+                  loadingSpinner.style.display = 'none';
+              });
+      });
+  </script>
+  </section>
+
+  <footer>
+    <p class="pied">
+      Copyright &copy;2024; Designed and built by AL | WEB-DEV
+    </p>
+  </footer>
+
+
+  
+</body>
+
+</html>
