@@ -53,12 +53,12 @@ button {
 
 
 .color {
-  color: rgb(76, 118, 161);
+  color: #94a3b8;
 
 }
 
 .carte-id {
-  color: rgb(76, 118, 161);
+  color: #94a3b8;
   font-size: 50px;
 }
 
@@ -234,7 +234,7 @@ nav {
 
 .projet {
   color: white;
-  background-color: rgb(76, 118, 161);
+  background-color: #94a3b8;
   font-size: 25px;
   padding: 2%;
   border-radius: 50px;
@@ -454,6 +454,9 @@ a {
     display: flex;
     flex-direction: column;
     width: 90%;
+  }
+  .card{
+    width: 150%;
   }
 }
 
